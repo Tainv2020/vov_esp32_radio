@@ -15,4 +15,10 @@ max98357_status max98357_wifi_init(void);
 
 void max98357_init(void);
 
+void max98357_play(void);
+
+void max98357_stop(void);
+
+void max98357_setVolume(uint8_t value);
+
 #endif /* _MAX98357_H_ */

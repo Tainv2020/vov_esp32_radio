@@ -1,24 +1,42 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
 #include "Arduino.h"
 #include "WiFi.h"
 #include "Audio.h"
 #include "max98357.h"
 
 Audio audio;
-String ssid =    "vip 3";
-String password = "anhtupkhd";
+String ssid =    "LilGG";
+String password = "07091997";
+
+static bool max98357_wifi_status(void);
 
 max98357_status max98357_wifi_init(void)
 {
-  max98357_status retVal = max98357_success;
+  uint8_t counter = 0;
+  max98357_status retVal = max98357_failed;
 
-  WiFi.disconnect();
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid.c_str(), password.c_str());
-  while (WiFi.status() != WL_CONNECTED)
+  if(max98357_wifi_status())
   {
-    retVal = max98357_failed;
+    retVal = max98357_success;
   }
-  delay(1500);
+  else
+  {
+    WiFi.disconnect();
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(ssid.c_str(), password.c_str());
+    for(counter = 0; counter < 6; counter ++)
+    {
+      if(WiFi.status() == WL_CONNECTED)
+      {
+        retVal = max98357_success;
+        break;
+      }
+      delay(500);
+    }
+    delay(1500);
+  }
 
   return retVal;
 }
@@ -26,6 +44,34 @@ max98357_status max98357_wifi_init(void)
 void max98357_init(void)
 {
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  audio.setVolume(100);
-  audio.connecttohost("http://vovmedia.vn/vov1?fbclid=IwAR307i7Z11wtzEF1zgiboHxi7bvyPxNzXJTSwsPvOuFQ7UXqDuVrRWxeFYo");
+  max98357_setVolume(21);
+  audio.connecttohost("https://str.vov.gov.vn/vovlive/vov5.sdp_aac/playlist.m3u8");
+  audio.loop();
+}
+
+void max98357_play(void)
+{
+  audio.loop();
+}
+
+void max98357_stop(void)
+{
+  audio.stopSong();
+}
+
+void max98357_setVolume(uint8_t value)
+{
+  audio.setVolume(value); // 0...21
+}
+
+static bool max98357_wifi_status(void)
+{
+  bool retVal = true;
+
+  if(WiFi.status() != WL_CONNECTED)
+  {
+    retVal = false;
+  }
+
+  return retVal;
 }

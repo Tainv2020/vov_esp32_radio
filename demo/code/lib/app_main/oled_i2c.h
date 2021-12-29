@@ -6,7 +6,7 @@
 
 void oled_init(void);
 
-void oled_println(int16_t x, int16_t y, String *buff);
+void oled_println(int16_t x, int16_t y, String text);
 
 void oled_clear(void);
 

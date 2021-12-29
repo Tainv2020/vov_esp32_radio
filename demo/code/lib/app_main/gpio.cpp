@@ -3,6 +3,8 @@
 #include "Arduino.h"
 #include "gpio.h"
 
+float frequency = 0;
+
 void gpio_init_io(void)
 {
   pinMode(VR, INPUT);
@@ -38,9 +40,12 @@ gpio_btn gpio_check_btn(void)
   return retVal;
 }
 
-uint16_t gpio_read_VR(void)
+float gpio_read_VR(void)
 {
-  uint16_t retVal = analogRead(VR);
+  uint16_t value = analogRead(VR);
+  uint16_t frequency_int = map(value, 0, 4095, 9000, 10700);
 
-  return retVal;
+  frequency = frequency_int/100.f;
+
+  return frequency;
 }

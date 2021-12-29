@@ -13,9 +13,9 @@ void oled_init(void)
   display.init();
 }
 
-void oled_println(int16_t x, int16_t y, String &buff)
+void oled_println(int16_t x, int16_t y, String text)
 {
-  display.drawString(x, y, buff);
+  display.drawString(x, y, text);
   display.display();
 }
 

@@ -24,6 +24,11 @@ Simon Monk 2013
 #ifndef TEA5767Radio_h
 #define TEA5767Radio_h
 
+#define DEFAULT_FRC 90.0
+#define HN_FRC 102.7
+#define VOV1_FRC 97.0
+#define VOV2_FRC 96.5
+
 class TEA5767Radio
 {
 private:

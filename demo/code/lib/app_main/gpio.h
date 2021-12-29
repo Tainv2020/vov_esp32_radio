@@ -19,6 +19,6 @@ void gpio_init_io(void);
 
 gpio_btn gpio_check_btn(void);
 
-uint16_t gpio_read_VR(void);
+float gpio_read_VR(void);
 
 #endif /* _GPIO_H_ */
