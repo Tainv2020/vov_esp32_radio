@@ -4,8 +4,6 @@
 #include "TEA5767Radio.h"
 #include "max98357.h"
 
-TEA5767Radio radio = TEA5767Radio();
-
 static float frequency = 0;
 static float frequency_pre = 0;
 static float use_max98357 = false;
@@ -19,7 +17,7 @@ void setup()
   Serial.begin(115200);
   oled_init();
   Wire.begin();
-  radio.setFrequency(DEFAULT_FRC);
+  radio_set_freq(DEFAULT_FRC);
   app_display_frc(DEFAULT_FRC);
 
   frequency = gpio_read_VR();
@@ -28,7 +26,7 @@ void setup()
 
 void loop() 
 {
-  // frequency = gpio_read_VR();
+//   frequency = gpio_read_VR();
   
   /* Set frequency through VR */
   if(frequency_pre != frequency)
@@ -41,15 +39,19 @@ void loop()
   if(check_btn == is_btn1)
   {
     max98357_stop();
+    radio_unmute();
     delay(500);
     app_set_frequency(HN_FRC);
   }
   else if(check_btn == is_btn2)
   {
 //    app_set_frequency(VOV1_FRC);
+
     max98357_status stt = max98357_wifi_init();
     if(stt == max98357_success)
     {
+      radio_mute();
+      
       oled_println(10, 50, "Connect to wifi success");
       max98357_init();
     }
@@ -68,7 +70,7 @@ void loop()
 
 static void app_set_frequency(float frc)
 {
-  radio.setFrequency(frc);
+  radio_set_freq(frc);
   app_display_frc(frc);
 }
 

@@ -21,25 +21,18 @@ http://arduiniana.org.
 Simon Monk 2013
 */
 
-#ifndef TEA5767Radio_h
-#define TEA5767Radio_h
+#ifndef _TEA5767Radio_H_
+#define _TEA5767Radio_H_
 
 #define DEFAULT_FRC 90.0
 #define HN_FRC 102.7
 #define VOV1_FRC 97.0
 #define VOV2_FRC 96.5
 
-class TEA5767Radio
-{
-private:
-  int _address;
+void radio_set_freq(float freq);
 
-public:
-  TEA5767Radio();
-  TEA5767Radio(int address);
-  void setFrequency(float frequency);
-  void setFrequency();
-};
+void radio_mute(void);
 
+void radio_unmute(void);
 
-#endif
+#endif /* _TEA5767Radio_H_ */

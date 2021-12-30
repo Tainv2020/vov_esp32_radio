@@ -24,30 +24,23 @@ Simon Monk 2013
 
 #include <Arduino.h>
 #include <Wire.h>
-#include "TEA5767Radio.h"
+#include "TEA5767N.h"
 
-TEA5767Radio::TEA5767Radio(int address)
+TEA5767N radio = TEA5767N();
+
+void radio_set_freq(float freq)
 {
-  _address = address;
+  radio.selectFrequency(freq);
 }
 
-TEA5767Radio::TEA5767Radio()
+void radio_mute(void)
 {
-  _address = 0x60;
+  radio.mute();
+  radio.setStandByOn();
 }
 
-
-void TEA5767Radio::setFrequency(float frequency)
+void radio_unmute(void)
 {
-    unsigned int frequencyB = 4 * (frequency * 1000000 + 225000) / 32768; 
-  byte frequencyH = frequencyB >> 8;
-  byte frequencyL = frequencyB & 0XFF;
-  Wire.beginTransmission(_address); 
-  Wire.write(frequencyH);
-  Wire.write(frequencyL);
-  Wire.write(0xB0);
-  Wire.write(0x10);
-  Wire.write(0x00);
-  Wire.endTransmission();
-  delay(100);  
+  radio.turnTheSoundBackOn();
+  radio.setStandByOff();
 }
