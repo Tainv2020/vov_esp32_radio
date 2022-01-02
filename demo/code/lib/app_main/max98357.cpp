@@ -41,11 +41,11 @@ max98357_status max98357_wifi_init(void)
   return retVal;
 }
 
-void max98357_init(void)
+void max98357_init(const char add[])
 {
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
   max98357_setVolume(21);
-  audio.connecttohost("https://str.vov.gov.vn/vovlive/vov5.sdp_aac/playlist.m3u8");
+  audio.connecttohost(add);
   audio.loop();
 }
 
