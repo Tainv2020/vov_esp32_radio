@@ -15,10 +15,18 @@ typedef enum
   is_btn3
 } gpio_btn;
 
+typedef enum
+{
+  using_tea5767 = 0,
+  using_max98357
+} gpio_module_mode;
+
 void gpio_init_io(void);
 
 gpio_btn gpio_check_btn(void);
 
 float gpio_read_VR(void);
+
+void gpio_stauts_module(gpio_module_mode module);
 
 #endif /* _GPIO_H_ */

@@ -7,8 +7,11 @@
 #include "max98357.h"
 
 Audio audio;
-String ssid =    "LilGG";
-String password = "07091997";
+//String ssid =    "LilGG";
+//String password = "07091997";
+
+String ssid =    "family3";
+String password = "ngoha56789";
 
 static bool max98357_wifi_status(void);
 

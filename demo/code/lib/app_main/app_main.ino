@@ -15,19 +15,26 @@ static void app_display_max98357(void);
 
 void setup() 
 {
+  /* Init I/O */
   gpio_init_io();
+  /* Init serial */
   Serial.begin(115200);
+  /* Init display */
   oled_init();
   Wire.begin();
-  radio_set_freq(DEFAULT_FRC);
-  app_display_tea5767(DEFAULT_FRC);
+  /* Run TEA5767 with default FRC */
+  app_set_frequency(DEFAULT_FRC);
+  /* Update led status */
+  gpio_stauts_module(using_tea5767);
 
+  /* Read VR value */
   frequency = gpio_read_VR();
   frequency_pre = frequency;
 }
 
 void loop() 
 {
+  /* Using TEA5767 */
   if(g_use_tea5767)
   {
     frequency = gpio_read_VR();
@@ -36,16 +43,17 @@ void loop()
     if((frequency - frequency_pre >= 0.1f) || (frequency_pre - frequency >= 0.1f))
     {
       frequency_pre = frequency;
+      /* Run TEA5767 with frequency */
       app_set_frequency(frequency);
     }
     delay(50);
   }
 
+  /* Read button */
   gpio_btn check_btn = gpio_check_btn();
+  /* Switch mode */
   if(check_btn == is_btn1)
   {
-    Serial.println("btn 1");
-
     /* Switch to MAX98357 */
     if(g_use_tea5767)
     {
@@ -53,9 +61,13 @@ void loop()
       if(stt == max98357_success)
       {
         g_use_tea5767 = false;
+        /* MUTE TEA5767 */
         radio_mute();
-        
+        /* Update led status */
+        gpio_stauts_module(using_max98357);
+        /* Init MAX98357 */
         max98357_init(max98357_channel[add_default]);
+        /* Display channel */
         app_display_max98357();
       }
       else
@@ -67,20 +79,44 @@ void loop()
     else
     {
       g_use_tea5767 = true;
+      /* Stop MAX98357 */
       max98357_stop();
+      /* Unmute TEA5767 */
       radio_unmute();
       delay(500);
+      /* Update led status */
+      gpio_stauts_module(using_tea5767);
+      /* Display frequency on oled */
       app_set_frequency(frequency);
     }
     
   }
+  /* Channel down for MAX98357 */
   else if(check_btn == is_btn2)
   {
     Serial.println("btn 2");
+    if(!g_use_tea5767)
+    {
+      max98357_status stt = max98357_wifi_init();
+      if(stt == max98357_success)
+      {
+        add_default -= 1;
+        if(add_default >= MAX_CHANNEL)
+        {
+          add_default = 0;
+        }
+        max98357_init(max98357_channel[add_default]);
+        app_display_max98357();
+      }
+      else
+      {
+        oled_println(10, 50, "Connect to wifi failed");
+      }
+    }
   }
+  /* Channel up for MAX98357 */
   else if(check_btn == is_btn3)
   {
-    Serial.println("btn 3");
     if(!g_use_tea5767)
     {
       max98357_status stt = max98357_wifi_init();
@@ -91,7 +127,6 @@ void loop()
         {
           add_default = 0;
         }
-        Serial.println(max98357_channel[add_default]);
         max98357_init(max98357_channel[add_default]);
         app_display_max98357();
       }

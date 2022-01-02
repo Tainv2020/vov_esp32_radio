@@ -52,9 +52,27 @@ float gpio_read_VR(void)
   }
   
   value = value/10;
-  frequency_int = map(value, 0, 4095, 9000, 10700);
-
-  frequency = frequency_int/100.0f;
+  frequency_int = map(value, 0, 4095, 900, 1070);
+  frequency = frequency_int/10.0f;
 
   return frequency;
+}
+
+void gpio_stauts_module(gpio_module_mode module)
+{
+  switch(module)
+  {
+    case using_tea5767:
+    {
+      digitalWrite(LED, 0);
+      break;
+    }
+    case using_max98357:
+    {
+      digitalWrite(LED, 1);
+      break;
+    }
+    default:
+      break;
+  }
 }
