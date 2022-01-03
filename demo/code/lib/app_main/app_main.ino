@@ -7,7 +7,7 @@
 static float frequency = 0.0;
 static float frequency_pre = 0.0;
 static bool g_use_tea5767 = true;
-static uint8_t add_default = 0;
+static int add_default = 0;
 
 static void app_set_frequency(float frc);
 static void app_display_tea5767(float frc);
@@ -101,9 +101,9 @@ void loop()
       if(stt == max98357_success)
       {
         add_default -= 1;
-        if(add_default >= MAX_CHANNEL)
+        if(add_default <= MIN_CHANNEL)
         {
-          add_default = 0;
+          add_default = MAX_CHANNEL;
         }
         max98357_init(max98357_channel[add_default]);
         app_display_max98357();
@@ -125,7 +125,7 @@ void loop()
         add_default += 1;
         if(add_default >= MAX_CHANNEL)
         {
-          add_default = 0;
+          add_default = MIN_CHANNEL;
         }
         max98357_init(max98357_channel[add_default]);
         app_display_max98357();

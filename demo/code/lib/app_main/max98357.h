@@ -5,6 +5,7 @@
 #define I2S_BCLK     27
 #define I2S_LRC      26
 #define MAX_CHANNEL  17
+#define MIN_CHANNEL  0
 
 const char max98357_channel[MAX_CHANNEL][100] = {"https://str.vov.gov.vn/vovlive/vov1vov5Vietnamese.sdp_aac/playlist.m3u8", \
                                  "https://str.vov.gov.vn/vovlive/vov2.sdp_aac/playlist.m3u8", \
