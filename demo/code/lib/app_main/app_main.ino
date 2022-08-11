@@ -34,21 +34,6 @@ void setup()
 
 void loop() 
 {
-  /* Using TEA5767 */
-  if(g_use_tea5767)
-  {
-    frequency = gpio_read_VR();
-    
-    /* Set frequency through VR */
-    if((frequency - frequency_pre >= 0.1f) || (frequency_pre - frequency >= 0.1f))
-    {
-      frequency_pre = frequency;
-      /* Run TEA5767 with frequency */
-      app_set_frequency(frequency);
-    }
-    delay(50);
-  }
-
   /* Read button */
   gpio_btn check_btn = gpio_check_btn();
   /* Switch mode */
@@ -137,7 +122,24 @@ void loop()
     }
   }
 
-  max98357_play();
+  /* Using TEA5767 */
+  if(g_use_tea5767)
+  {
+    frequency = gpio_read_VR();
+    
+    /* Set frequency through VR */
+    if((frequency - frequency_pre >= 0.1f) || (frequency_pre - frequency >= 0.1f))
+    {
+      frequency_pre = frequency;
+      /* Run TEA5767 with frequency */
+      app_set_frequency(frequency);
+    }
+    delay(50);
+  }
+  else
+  {
+    max98357_play();
+  }
 }
 
 static void app_set_frequency(float frc)

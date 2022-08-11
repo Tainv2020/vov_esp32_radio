@@ -47,7 +47,7 @@ max98357_status max98357_wifi_init(void)
 void max98357_init(const char add[])
 {
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  max98357_setVolume(21);
+  max98357_setVolume(100);
   audio.connecttohost(add);
   audio.loop();
 }
