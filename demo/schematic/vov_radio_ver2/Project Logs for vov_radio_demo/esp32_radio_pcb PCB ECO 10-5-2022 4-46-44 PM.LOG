@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=BTN_NEXT Pin=U1-19
+Removed Pin From Net: NetName=BTN_PRE Pin=U1-21
+Added Pin To Net: NetName=BTN_PRE Pin=U1-19
+Added Pin To Net: NetName=BTN_NEXT Pin=U1-21
+Added Room: Name=esp32_radio_sch

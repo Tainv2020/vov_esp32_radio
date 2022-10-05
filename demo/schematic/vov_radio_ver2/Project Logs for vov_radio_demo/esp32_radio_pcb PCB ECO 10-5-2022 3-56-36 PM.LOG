@@ -1,0 +1,158 @@
+Added Component: Designator=C1(tu tantalum smd7343)
+Added Component: Designator=C2(tu tantalum smd7343)
+Added Component: Designator=C3(tu 0805)
+Added Component: Designator=C4(tu 0805)
+Added Component: Designator=D1(DIODE SMA)
+Added Component: Designator=H1(XH2.54M-6)
+Added Component: Designator=H2(XH2.54M-4)
+Added Component: Designator=H3(XH2.54M-8)
+Added Component: Designator=H4(XH2.54M-3)
+Added Component: Designator=JACK DC1(JACK DC 5.5)
+Added Component: Designator=KF1(Con 2 KF301 5.08)
+Added Component: Designator=KF2(Con 2 KF301 5.08)
+Added Component: Designator=KF3(Con 2 KF301 5.08)
+Added Component: Designator=KF4(Con 2 KF301 5.08)
+Added Component: Designator=KF5(Con 2 KF301 5.08)
+Added Component: Designator=L1(LED-0805-Red)
+Added Component: Designator=P1(Header 11)
+Added Component: Designator=R1(tro smd 0805)
+Added Component: Designator=R2(tro smd 0805)
+Added Component: Designator=R3(tro smd 0805)
+Added Component: Designator=R4(tro smd 0805)
+Added Component: Designator=R5(tro smd 0805)
+Added Component: Designator=R6(tro smd 0805)
+Added Component: Designator=R7(tro smd 0805)
+Added Component: Designator=R8(tro smd 0805)
+Added Component: Designator=U1(MODULE_ESP32-DEVKITV1)
+Added Pin To Net: NetName=+5V Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=+5V Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=+5V Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=+5V Pin=C4-2
+Added Pin To Net: NetName=+5V Pin=D1-1
+Added Pin To Net: NetName=GND Pin=H1-1
+Added Pin To Net: NetName=BCK Pin=H1-2
+Added Pin To Net: NetName=DIN Pin=H1-3
+Added Pin To Net: NetName=LCK Pin=H1-4
+Added Pin To Net: NetName=GND Pin=H1-5
+Added Pin To Net: NetName=+5V Pin=H1-6
+Added Pin To Net: NetName=+3V3 Pin=H2-1
+Added Pin To Net: NetName=SDA Pin=H2-2
+Added Pin To Net: NetName=SCL Pin=H2-3
+Added Pin To Net: NetName=GND Pin=H2-4
+Added Pin To Net: NetName=GND Pin=H3-1
+Added Pin To Net: NetName=+5V Pin=H3-2
+Added Pin To Net: NetName=GND Pin=H4-2
+Added Pin To Net: NetName=+5V Pin=JACK DC1-1
+Added Pin To Net: NetName=GND Pin=JACK DC1-2
+Added Pin To Net: NetName=GND Pin=JACK DC1-3
+Added Pin To Net: NetName=GND Pin=KF1-2
+Added Pin To Net: NetName=GND Pin=KF2-2
+Added Pin To Net: NetName=GND Pin=KF3-2
+Added Pin To Net: NetName=LED1 Pin=L1-1
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=GND Pin=P1-6
+Added Pin To Net: NetName=+5V Pin=P1-7
+Added Pin To Net: NetName=SPK_IN_L Pin=P1-9
+Added Pin To Net: NetName=GND Pin=P1-10
+Added Pin To Net: NetName=SPK_IN_R Pin=P1-11
+Added Pin To Net: NetName=SCL Pin=R1-1
+Added Pin To Net: NetName=+3V3 Pin=R1-2
+Added Pin To Net: NetName=SDA Pin=R2-1
+Added Pin To Net: NetName=+3V3 Pin=R2-2
+Added Pin To Net: NetName=+3V3 Pin=R3-2
+Added Pin To Net: NetName=+3V3 Pin=R4-2
+Added Pin To Net: NetName=+3V3 Pin=R5-2
+Added Pin To Net: NetName=NetL1_2 Pin=R6-1
+Added Pin To Net: NetName=+3V3 Pin=R6-2
+Added Pin To Net: NetName=+3V3 Pin=R7-2
+Added Pin To Net: NetName=+3V3 Pin=R8-2
+Added Pin To Net: NetName=+3V3 Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=LED1 Pin=U1-6
+Added Pin To Net: NetName=SDA Pin=U1-11
+Added Pin To Net: NetName=SCL Pin=U1-14
+Added Pin To Net: NetName=DIN Pin=U1-23
+Added Pin To Net: NetName=LCK Pin=U1-24
+Added Pin To Net: NetName=BCK Pin=U1-25
+Added Pin To Net: NetName=GND Pin=U1-29
+Added Pin To Net: NetName=BTN_MODE Pin=KF2-1
+Added Pin To Net: NetName=BTN_MODE Pin=R4-1
+Added Pin To Net: NetName=BTN_MODE Pin=U1-20
+Added Net: Name=BTN_MODE
+Added Pin To Net: NetName=BTN_NEXT Pin=KF3-1
+Added Pin To Net: NetName=BTN_NEXT Pin=R5-1
+Added Pin To Net: NetName=BTN_NEXT Pin=U1-19
+Added Net: Name=BTN_NEXT
+Added Pin To Net: NetName=BTN_PRE Pin=KF1-1
+Added Pin To Net: NetName=BTN_PRE Pin=R3-1
+Added Pin To Net: NetName=BTN_PRE Pin=U1-21
+Added Net: Name=BTN_PRE
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=U1-30
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=SPK_OUT_L1 Pin=KF4-1
+Added Pin To Net: NetName=SPK_OUT_L1 Pin=KF4-2
+Added Pin To Net: NetName=SPK_OUT_L1 Pin=P1-3
+Added Net: Name=SPK_OUT_L1
+Added Pin To Net: NetName=SPK_OUT_L2 Pin=P1-4
+Added Net: Name=SPK_OUT_L2
+Added Pin To Net: NetName=SPK_OUT_R1 Pin=KF5-1
+Added Pin To Net: NetName=SPK_OUT_R1 Pin=KF5-2
+Added Pin To Net: NetName=SPK_OUT_R1 Pin=P1-1
+Added Net: Name=SPK_OUT_R1
+Added Pin To Net: NetName=SPK_OUT_R2 Pin=P1-2
+Added Net: Name=SPK_OUT_R2
+Added Pin To Net: NetName=TFT_CS Pin=H3-7
+Added Pin To Net: NetName=TFT_CS Pin=U1-5
+Added Net: Name=TFT_CS
+Added Pin To Net: NetName=TFT_DC Pin=H3-6
+Added Pin To Net: NetName=TFT_DC Pin=U1-4
+Added Net: Name=TFT_DC
+Added Pin To Net: NetName=TFT_MOSI Pin=H3-4
+Added Pin To Net: NetName=TFT_MOSI Pin=U1-26
+Added Net: Name=TFT_MOSI
+Added Pin To Net: NetName=TFT_RST Pin=H3-5
+Added Pin To Net: NetName=TFT_RST Pin=U1-28
+Added Net: Name=TFT_RST
+Added Pin To Net: NetName=TFT_SCLK Pin=H3-3
+Added Pin To Net: NetName=TFT_SCLK Pin=U1-27
+Added Net: Name=TFT_SCLK
+Added Pin To Net: NetName=VR_LEFT Pin=H4-1
+Added Pin To Net: NetName=VR_LEFT Pin=R8-1
+Added Pin To Net: NetName=VR_LEFT Pin=U1-9
+Added Net: Name=VR_LEFT
+Added Pin To Net: NetName=VR_RIGHT Pin=H4-3
+Added Pin To Net: NetName=VR_RIGHT Pin=R7-1
+Added Pin To Net: NetName=VR_RIGHT Pin=U1-10
+Added Net: Name=VR_RIGHT
+Added Member To Class: ClassName=esp32_radio_sch Member=Component C1 470uF
+Added Member To Class: ClassName=esp32_radio_sch Member=Component C2 470uF
+Added Member To Class: ClassName=esp32_radio_sch Member=Component C3 10pF
+Added Member To Class: ClassName=esp32_radio_sch Member=Component C4 10pF
+Added Member To Class: ClassName=esp32_radio_sch Member=Component D1 M7
+Added Member To Class: ClassName=esp32_radio_sch Member=Component H1 Header 6P 2.54 Duc Thang
+Added Member To Class: ClassName=esp32_radio_sch Member=Component H2 Header 4P 2.54 Duc Thang
+Added Member To Class: ClassName=esp32_radio_sch Member=Component H3 Header 8P 2.54 Duc Thang
+Added Member To Class: ClassName=esp32_radio_sch Member=Component H4 Header 3P 2.54 Duc Thang
+Added Member To Class: ClassName=esp32_radio_sch Member=Component JACK DC1 JACK DC 5.5
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF1 CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF2 CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF3 CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF4 CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF5 CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component L1 LED 0805
+Added Member To Class: ClassName=esp32_radio_sch Member=Component P1 Header 11
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R1 10K
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R2 10K
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R3 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R4 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R5 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R6 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R7 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R8 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component U1 ESP32-DEVKITC-32D
+Added Room: Name=esp32_radio_sch
