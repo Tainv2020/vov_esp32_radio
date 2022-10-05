@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=SPK_OUT_R Pin=KF1-1
+Removed Pin From Net: NetName=SPK_OUT_L Pin=KF1-2
+Added Pin To Net: NetName=SPK_OUT_L Pin=KF1-1
+Added Pin To Net: NetName=SPK_OUT_R Pin=KF1-2
+Added Room: Name=esp32_radio_sch

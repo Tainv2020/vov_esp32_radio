@@ -1,0 +1,15 @@
+Change Component Description : Designator=JP? Old Description=C?m New Description=C?m
+Change Component Description : Designator=JP? Old Description=C?m New Description=C?m
+Change Component Description : Designator=JP? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF1 Old Description=C?m New Description=C?m
+Added Pin To Net: NetName=BCK Pin=U?-25
+Added Member To Class: ClassName=esp32_radio_sch Member=Component BT? Nut Nhan 2 Chan SMD 3x6x2.5
+Added Member To Class: ClassName=esp32_radio_sch Member=Component BT? Nut Nhan 2 Chan SMD 3x6x2.5
+Added Member To Class: ClassName=esp32_radio_sch Member=Component JP? JP 1x6 2.54
+Added Member To Class: ClassName=esp32_radio_sch Member=Component JP? JP 1x4 2.54
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 1K
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 1K
+Added Room: Name=esp32_radio_sch

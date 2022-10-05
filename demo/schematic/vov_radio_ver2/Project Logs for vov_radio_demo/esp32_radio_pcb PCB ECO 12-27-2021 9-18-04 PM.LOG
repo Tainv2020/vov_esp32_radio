@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=+3V3 Pin=VR1-1
+Change Component Description : Designator=JP1 Old Description=C?m New Description=C?m
+Change Component Description : Designator=JP2 Old Description=C?m New Description=C?m
+Change Component Description : Designator=JP3 Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF1 Old Description=C?m New Description=C?m
+Added Pin To Net: NetName=+5V Pin=VR1-1
+Added Room: Name=esp32_radio_sch
