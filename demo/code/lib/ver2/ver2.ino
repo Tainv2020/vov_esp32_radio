@@ -39,7 +39,7 @@ void loop()
     }
 
     /* Check switch mode button */
-    if(gpio_check_btn() == is_btn2)
+    if(gpio_check_btn() == is_btn_mode)
     {
       if(app_MAX89357_is_ready())
       {
@@ -60,9 +60,8 @@ void loop()
     gpio_btn check_btn = gpio_check_btn();
 
     /* Channel down for MAX98357 */
-    if(check_btn == is_btn1)
+    if(check_btn == is_btn_next)
     {
-      //Serial.println("btn 1");
       if(!g_use_tea5767)
       {
         max98357_status stt = max98357_wifi_init();
@@ -83,7 +82,7 @@ void loop()
       }
     }
     /* Channel up for MAX98357 */
-    else if(check_btn == is_btn3)
+    else if(check_btn == is_btn_pre)
     {
       if(!g_use_tea5767)
       {
@@ -106,7 +105,7 @@ void loop()
     }
 
     /* Check switch mode button */
-    if(gpio_check_btn() == is_btn2)
+    if(gpio_check_btn() == is_btn_mode)
     {
       g_use_tea5767 = true;
       /* Stop MAX98357 */

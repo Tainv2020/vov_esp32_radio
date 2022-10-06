@@ -4,9 +4,9 @@
 #include "TEA5767Radio.h"
 #include "gpio.h"
 
-#define BTN1 32
-#define BTN2 35
-#define BTN3 34
+#define BTN_NEXT 32
+#define BTN_MODE 35
+#define BTN_PRE  34
 #define LED  16
 #define VR_LEFT   18
 #define VR_RIGHT  19
@@ -17,9 +17,9 @@ void gpio_init_io(void)
 {
   pinMode(VR_LEFT, INPUT);
   pinMode(VR_RIGHT, INPUT);
-  pinMode(BTN1, INPUT_PULLUP);
-  pinMode(BTN2, INPUT_PULLUP);
-  pinMode(BTN3, INPUT_PULLUP);
+  pinMode(BTN_NEXT, INPUT_PULLUP);
+  pinMode(BTN_MODE, INPUT_PULLUP);
+  pinMode(BTN_PRE, INPUT_PULLUP);
   pinMode(LED, OUTPUT);
 
   digitalWrite(LED, 1);
@@ -29,26 +29,26 @@ gpio_btn gpio_check_btn(void)
 {
   gpio_btn retVal = is_unknow;
 
-  if(digitalRead(BTN1) == 0)
+  if(digitalRead(BTN_NEXT) == 0)
   {
     delay(30);
-    while(digitalRead(BTN1) == 0);
-    retVal = is_btn1;
-    Serial.println("btn 1");
+    while(digitalRead(BTN_NEXT) == 0);
+    retVal = is_btn_next;
+    Serial.println("btn next");
   }
-  else if(digitalRead(BTN2) == 0)
+  else if(digitalRead(BTN_MODE) == 0)
   {
     delay(30);
-    while(digitalRead(BTN2) == 0);
-    retVal = is_btn2;
-    Serial.println("btn 2");
+    while(digitalRead(BTN_MODE) == 0);
+    retVal = is_btn_mode;
+    Serial.println("btn mode");
   }
-  else if(digitalRead(BTN3) == 0)
+  else if(digitalRead(BTN_PRE) == 0)
   {
     delay(30);
-    while(digitalRead(BTN3) == 0);
-    retVal = is_btn3;
-    Serial.println("btn 3");
+    while(digitalRead(BTN_PRE) == 0);
+    retVal = is_btn_pre;
+    Serial.println("btn pre");
   }
 
   return retVal;
