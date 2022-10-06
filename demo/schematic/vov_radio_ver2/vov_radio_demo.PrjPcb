@@ -72,6 +72,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TQYHYNTL
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for vov_radio_demo\Design Rule Check - esp32_radio_pcb.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0

@@ -1,0 +1,98 @@
+Change Component Designator: OldDesignator=C1 NewDesignator=C?
+Change Component Designator: OldDesignator=C2 NewDesignator=C?
+Change Component Designator: OldDesignator=C3 NewDesignator=C?
+Change Component Designator: OldDesignator=C4 NewDesignator=C?
+Change Component Designator: OldDesignator=D1 NewDesignator=D?
+Change Component Designator: OldDesignator=H1 NewDesignator=H?
+Change Component Designator: OldDesignator=H2 NewDesignator=H?
+Change Component Designator: OldDesignator=H3 NewDesignator=H?
+Change Component Designator: OldDesignator=H4 NewDesignator=H?
+Change Component Designator: OldDesignator=JACK DC1 NewDesignator=JACK DC?
+Change Component Designator: OldDesignator=KF1 NewDesignator=KF?
+Change Component Designator: OldDesignator=KF2 NewDesignator=KF?
+Change Component Designator: OldDesignator=KF3 NewDesignator=KF?
+Change Component Designator: OldDesignator=KF4 NewDesignator=KF?
+Change Component Designator: OldDesignator=KF5 NewDesignator=KF?
+Change Component Designator: OldDesignator=L1 NewDesignator=L?
+Change Component Designator: OldDesignator=P1 NewDesignator=P?
+Change Component Designator: OldDesignator=R1 NewDesignator=R?
+Change Component Designator: OldDesignator=R2 NewDesignator=R?
+Change Component Designator: OldDesignator=R3 NewDesignator=R?
+Change Component Designator: OldDesignator=R4 NewDesignator=R?
+Change Component Designator: OldDesignator=R5 NewDesignator=R?
+Change Component Designator: OldDesignator=R6 NewDesignator=R?
+Change Component Designator: OldDesignator=R7 NewDesignator=R?
+Change Component Designator: OldDesignator=R8 NewDesignator=R?
+Change Component Designator: OldDesignator=U1 NewDesignator=U?
+Change Component Description : Designator=H? Old Description=C?m New Description=C?m
+Change Component Description : Designator=H? Old Description=C?m New Description=C?m
+Change Component Description : Designator=H? Old Description=C?m New Description=C?m
+Change Component Description : Designator=H? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF? Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF? Old Description=C?m New Description=C?m
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=KF?(Con 2 KF301 5.08)
+Added Component: Designator=R?(tro smd 0805)
+Added Component: Designator=R?(tro smd 0805)
+Added Component: Designator=R?(tro smd 0805)
+Added Component: Designator=R?(tro smd 0805)
+Added Component: Designator=R?(tro smd 0805)
+Added Component: Designator=R?(tro smd 0805)
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=GND Pin=KF?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Added Pin To Net: NetName=+3V3 Pin=R?-2
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetD?_2
+Change Net Name : Old Net Name=NetL1_2 New Net Name=NetL?_2
+Added Pin To Net: NetName=BTN_1 Pin=KF?-1
+Added Pin To Net: NetName=BTN_1 Pin=R?-1
+Added Pin To Net: NetName=BTN_1 Pin=U?-7
+Added Net: Name=BTN_1
+Added Pin To Net: NetName=BTN_2 Pin=KF?-1
+Added Pin To Net: NetName=BTN_2 Pin=R?-1
+Added Pin To Net: NetName=BTN_2 Pin=U?-8
+Added Net: Name=BTN_2
+Added Pin To Net: NetName=BTN_3 Pin=KF?-1
+Added Pin To Net: NetName=BTN_3 Pin=R?-1
+Added Pin To Net: NetName=BTN_3 Pin=U?-12
+Added Net: Name=BTN_3
+Added Pin To Net: NetName=BTN_4 Pin=KF?-1
+Added Pin To Net: NetName=BTN_4 Pin=R?-1
+Added Pin To Net: NetName=BTN_4 Pin=U?-13
+Added Net: Name=BTN_4
+Added Pin To Net: NetName=BTN_5 Pin=KF?-1
+Added Pin To Net: NetName=BTN_5 Pin=R?-1
+Added Pin To Net: NetName=BTN_5 Pin=U?-15
+Added Net: Name=BTN_5
+Added Pin To Net: NetName=BTN_6 Pin=KF?-1
+Added Pin To Net: NetName=BTN_6 Pin=R?-1
+Added Pin To Net: NetName=BTN_6 Pin=U?-22
+Added Net: Name=BTN_6
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component KF? CON 2 KF301
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Member To Class: ClassName=esp32_radio_sch Member=Component R? 10k
+Added Room: Name=esp32_radio_sch
