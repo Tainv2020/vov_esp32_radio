@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=KF8 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Added Room: Name=esp32_radio_sch

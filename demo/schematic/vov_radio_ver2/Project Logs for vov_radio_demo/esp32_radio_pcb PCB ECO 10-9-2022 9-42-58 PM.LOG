@@ -1,0 +1,16 @@
+Change Component Footprint: Designator=KF1 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF2 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF3 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF4 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF5 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF6 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF7 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Footprint: Designator=KF9 Old Footprint=Con 2 KF301 5.08 New Footprint=Nut Nhan 2 Chan SMD 3x6x2.5
+Change Component Description : Designator=H1 Old Description=C?m New Description=C?m
+Change Component Description : Designator=H2 Old Description=C?m New Description=C?m
+Change Component Description : Designator=H3 Old Description=C?m New Description=C?m
+Change Component Description : Designator=H4 Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF8 Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF10 Old Description=C?m New Description=C?m
+Change Component Description : Designator=KF11 Old Description=C?m New Description=C?m
+Added Room: Name=esp32_radio_sch

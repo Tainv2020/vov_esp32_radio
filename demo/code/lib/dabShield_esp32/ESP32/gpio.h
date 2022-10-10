@@ -4,9 +4,9 @@
 typedef enum
 {
   is_unknow = 0,
-  is_btn1,
-  is_btn2,
-  is_btn3
+  is_btn_next,
+  is_btn_mode,
+  is_btn_pre
 } gpio_btn;
 
 typedef enum
