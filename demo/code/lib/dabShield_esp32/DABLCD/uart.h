@@ -11,6 +11,8 @@
  * 0007 -> Display channel 5
  * 0008 -> Display channel 6
  * 0009 -> Wifi failed
+ * 0010 -> Wifi available
+ * 0011 -> UART not available
  */
 
 typedef enum
@@ -24,10 +26,12 @@ typedef enum
   uart_display_channel_5,
   uart_display_channel_6,
   uart_wifi_failed,
+  uart_available,
   uart_not_available
-} uart_decode;
+} uart_code;
 
 void UART_Init(void);
-uart_decode UART_Decode_String(void);
+uart_code UART_Decode_String(void);
+void UART_Transmit(uart_code Data);
 
 #endif /* _UART_H_ */

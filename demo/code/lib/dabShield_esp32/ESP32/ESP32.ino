@@ -2,12 +2,12 @@
 #include "max98357.h"
 #include "uart.h"
 
-static bool g_use_tea5767 = true;
+static bool g_use_tea5767 = false;
 static int add_default = 0;
 
 static void app_init(void);
 static bool app_MAX89357_is_ready(void);
-static void app_display_max98357(void);
+static void app_display_max98357(uart_code Data);
 
 void setup() 
 {
@@ -31,6 +31,7 @@ void loop()
       else
       {
         // display wifi failed on LCD
+        app_display_max98357(uart_wifi_failed);
       }
     }
   }
@@ -56,11 +57,12 @@ void loop()
             add_default = MAX_CHANNEL;
           }
           max98357_init(max98357_channel[add_default]);
-          app_display_max98357();
+          app_display_max98357(uart_available);
         }
         else
         {
           // display wifi failed on LCD
+          app_display_max98357(uart_wifi_failed);
         }
       }
     }
@@ -78,11 +80,12 @@ void loop()
             add_default = MIN_CHANNEL;
           }
           max98357_init(max98357_channel[add_default]);
-          app_display_max98357();
+          app_display_max98357(uart_available);
         }
         else
         {
           // display wifi failed on LCD
+          app_display_max98357(uart_wifi_failed);
         }
       }
     }
@@ -119,17 +122,19 @@ static bool app_MAX89357_is_ready(void)
     /* Init MAX98357 */
     max98357_init(max98357_channel[add_default]);
     /* Display channel */
-    app_display_max98357();
+    app_display_max98357(uart_available);
   }
   else
   {
     // display wifi failed on LCD
+    app_display_max98357(uart_wifi_failed);
   }
 
   return ret_val;
 }
 
-static void app_display_max98357(void)
+static void app_display_max98357(uart_code Data)
 {
   // Write code to DAB shield to display channel on LCD
+  UART_Transmit(Data);
 }
