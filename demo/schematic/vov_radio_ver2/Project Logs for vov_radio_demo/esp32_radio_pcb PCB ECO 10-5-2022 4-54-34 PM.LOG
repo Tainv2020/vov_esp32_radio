@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=VR_LEFT Pin=H4-1
-Removed Pin From Net: NetName=VR_RIGHT Pin=H4-3
-Removed Pin From Net: NetName=VR_RIGHT Pin=R7-1
-Removed Pin From Net: NetName=VR_LEFT Pin=R8-1
-Added Pin To Net: NetName=VR_RIGHT Pin=H4-1
-Added Pin To Net: NetName=VR_LEFT Pin=H4-3
-Added Pin To Net: NetName=VR_LEFT Pin=R7-1
-Added Pin To Net: NetName=VR_RIGHT Pin=R8-1
-Added Room: Name=esp32_radio_sch

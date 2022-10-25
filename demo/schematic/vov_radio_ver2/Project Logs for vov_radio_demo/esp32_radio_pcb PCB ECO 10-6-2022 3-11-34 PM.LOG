@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=BTN_3 Pin=U1-12
-Removed Pin From Net: NetName=BTN_5 Pin=U1-15
-Added Pin To Net: NetName=BTN_5 Pin=U1-12
-Added Pin To Net: NetName=BTN_3 Pin=U1-15
-Added Member To Class: ClassName=esp32_radio_sch Member=Component KF11 CON 2 KF301
-Added Room: Name=esp32_radio_sch

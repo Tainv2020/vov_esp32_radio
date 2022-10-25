@@ -4,26 +4,17 @@
 #define I2S_DOUT     25
 #define I2S_BCLK     27
 #define I2S_LRC      26
-#define MAX_CHANNEL  17
+#define MAX_CHANNEL  8
 #define MIN_CHANNEL  0
 
-const char max98357_channel[MAX_CHANNEL][100] = {"https://str.vov.gov.vn/vovlive/vov1vov5Vietnamese.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov2.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov247vov5English.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov3.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov4.DBCuuLong.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov4.HCM.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov4.MienTrung.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov4.TayBac.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov4.TayNguyen.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov5.JapaneseIndonesia.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov5.RussianChinese.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov5.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov5.SpanishGermanFrench.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vov5.ThaiLaotianKhmer.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vovFM89.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vovGTHCM.sdp_aac/playlist.m3u8", \
-                                 "https://str.vov.gov.vn/vovlive/vovGTHN.sdp_aac/playlist.m3u8"};
+const char max98357_channel[MAX_CHANNEL][100] = {"http://media.kythuatvov.vn:7001", \
+                                 "http://media.kythuatvov.vn:7003", \
+                                 "http://media.kythuatvov.vn:10005", \
+                                 "http://media.kythuatvov.vn:7039", \
+                                 "http://media.kythuatvov.vn:7007", \
+                                 "http://media.kythuatvov.vn:7003", \
+                                 "http://media.kythuatvov.vn:7025", \
+                                 "http://media.kythuatvov.vn:7021"};
 
 typedef enum
 {

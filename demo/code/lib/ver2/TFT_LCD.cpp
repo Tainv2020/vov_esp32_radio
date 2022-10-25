@@ -36,7 +36,7 @@ void TFT_PrintText(int16_t x, int16_t y, int8_t sizeText, String text)
 
 void TFT_DeleteLine(int16_t line)
 {
-  tft.fillRect(50,line,150,40,ILI9341_BLACK);
+  tft.fillRect(0,line,200,60,ILI9341_BLACK);
 }
 
 void TFT_Clear()

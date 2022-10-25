@@ -1,3 +1,0 @@
-Removed Pin From Net: NetName=+5V Pin=VR1-1
-Added Pin To Net: NetName=+3V3 Pin=VR1-1
-Added Room: Name=esp32_radio_sch

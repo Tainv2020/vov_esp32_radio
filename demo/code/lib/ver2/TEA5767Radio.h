@@ -26,13 +26,10 @@ Simon Monk 2013
 
 /* #define MAX_FRE   110
 #define MIN_FRE   90 */
-#define MAX_FRE   9
+#define MAX_FRE   5
 #define MIN_FRE   0 
-#define DEFAULT_FRC 90.0
-#define HN_FRC 102.7
-#define VOV1_FRC 97.0
-#define VOV2_FRC 96.5
-#define MAX_CHANNEL 10
+#define DEFAULT_FRC 91.0
+#define MAX_CHANNEL 6
 
 extern float g_fre_arr[MAX_CHANNEL];
 

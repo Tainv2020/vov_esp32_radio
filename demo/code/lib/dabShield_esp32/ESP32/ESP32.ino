@@ -2,25 +2,27 @@
 #include "max98357.h"
 #include "uart.h"
 
-static bool g_use_tea5767 = false;
+static bool g_use_tea5767 = true;
 static int add_default = 0;
 
 static void app_init(void);
 static bool app_MAX89357_is_ready(void);
 static void app_display_max98357(uart_code Data);
+static void app_run_uart(void);
 
 void setup() 
 {
-  /* Init serial */
-  Serial.begin(115200);
   app_init();
 }
 
 void loop() 
 {
   /* Run TEA5767 */
-  while(g_use_tea5767)
+  if(g_use_tea5767)
   {
+    /* Check uart */
+    app_run_uart();
+    
     /* Check switch mode button */
     if(gpio_check_btn() == is_btn_mode)
     {
@@ -35,9 +37,7 @@ void loop()
       }
     }
   }
-
-  /* Run MAX89357 */
-  while(!g_use_tea5767)
+  else /* Run MAX89357 */
   {
     max98357_play();
     /* Read button */
@@ -106,6 +106,7 @@ static void app_init(void)
 {
   /* Init I/O */
   gpio_init_io();
+  /* Init Serial */
   UART_Init();
 }
 
@@ -137,4 +138,10 @@ static void app_display_max98357(uart_code Data)
 {
   // Write code to DAB shield to display channel on LCD
   UART_Transmit(Data);
+}
+
+static void app_run_uart(void)
+{
+  uart_code ret_val = UART_Decode_String();
+  UART_Transmit(ret_val);
 }

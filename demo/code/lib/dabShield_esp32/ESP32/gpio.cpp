@@ -6,7 +6,7 @@
 #define BTN_NEXT 32
 #define BTN_MODE 35
 #define BTN_PRE  34
-#define LED  16
+#define LED  23
 
 void gpio_init_io(void)
 {

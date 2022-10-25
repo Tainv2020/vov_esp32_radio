@@ -3,12 +3,12 @@
 #include "Arduino.h"
 #include "uart.h"
 
-#define RX_PIN 2
-#define TX_PIN 3
+#define RX2_PIN 16
+#define TX2_PIN 17
 #define MAX_LENGTH 4
 #define MAX_CODE 10
 
-char g_buffer[MAX_LENGTH];
+char g_buffer[MAX_LENGTH] = {};
 
 /*
  * 0001 -> Run radio
@@ -37,17 +37,81 @@ char g_data[MAX_CODE][10] = {"0001", \
 
 void UART_Init(void)
 {
-  Serial1.begin(9600);
+  /* Init serial */
+  Serial.begin(115200);
+  Serial2.begin(9600, SERIAL_8N1, RX2_PIN, TX2_PIN);
 }
 
 uart_code UART_Decode_String(void)
 {
   uart_code ret_val = uart_not_available;
   
-  if(Serial1.available() > MAX_LENGTH)
+  while(Serial2.available() >= MAX_LENGTH)
   {
-    Serial1.readBytes(g_buffer, MAX_LENGTH);
-    Serial.println(g_buffer);
+    Serial2.readBytes(g_buffer, MAX_LENGTH);
+
+    if(g_buffer[2] == '0')
+    {
+      switch(g_buffer[3])
+      {
+        case '1':
+        {
+          ret_val = uart_run_radio;
+          Serial.print("0001");
+          break;
+        }
+        case '2':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0002");
+          break;
+        }
+        case '3':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0003");
+          break;
+        }
+        case '4':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0004");
+          break;
+        }
+        case '5':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0005");
+          break;
+        }
+        case '6':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0006");
+          break;
+        }
+        case '7':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0007");
+          break;
+        }
+        case '8':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0008");
+          break;
+        }
+        case '9':
+        {
+          ret_val = uart_mute_radio;
+          Serial.print("0009");
+          break;
+        }
+        default:
+          break;
+      }
+    }
   }
 
   return ret_val;
@@ -55,5 +119,6 @@ uart_code UART_Decode_String(void)
 
 void UART_Transmit(uart_code Data)
 {
-  Serial1.print(g_data[Data]);
+  if(Data != uart_not_available)
+    Serial2.print(g_data[Data]);
 }

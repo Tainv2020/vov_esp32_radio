@@ -10,8 +10,9 @@
 #define LED  16
 #define VR_LEFT   18
 #define VR_RIGHT  19
+#define TIME_MODE 3000
 
-static bool first_run = true;
+gpio_btn g_btn_state = is_unknow;
 
 void gpio_init_io(void)
 {
@@ -25,33 +26,41 @@ void gpio_init_io(void)
   digitalWrite(LED, 1);
 }
 
-gpio_btn gpio_check_btn(void)
+void gpio_check_btn(void)
 {
-  gpio_btn retVal = is_unknow;
+  unsigned long time_press = 0;
 
   if(digitalRead(BTN_NEXT) == 0)
   {
     delay(30);
     while(digitalRead(BTN_NEXT) == 0);
-    retVal = is_btn_next;
-    Serial.println("btn next");
+    g_btn_state = is_btn_next;
+    //Serial.println("btn next");
   }
   else if(digitalRead(BTN_MODE) == 0)
   {
+    time_press = millis();
     delay(30);
     while(digitalRead(BTN_MODE) == 0);
-    retVal = is_btn_mode;
-    Serial.println("btn mode");
+
+    if((unsigned long)(millis() - time_press) >= TIME_MODE)
+    {
+      g_btn_state = is_btn_mode;
+      //Serial.println("btn mode");
+    }
+    else
+    {
+      g_btn_state = is_btn_play_stop;
+      //Serial.println("play/stop");
+    }
   }
   else if(digitalRead(BTN_PRE) == 0)
   {
     delay(30);
     while(digitalRead(BTN_PRE) == 0);
-    retVal = is_btn_pre;
-    Serial.println("btn pre");
+    g_btn_state = is_btn_pre;
+    //Serial.println("btn pre");
   }
-
-  return retVal;
 }
 
 void gpio_read_VR(int8_t *frequency)
@@ -62,10 +71,10 @@ void gpio_read_VR(int8_t *frequency)
 
   for(; Count < 2; Count++)
   {
-    LeftState = digitalRead(VR_LEFT);
+    LeftState = digitalRead(VR_RIGHT);
     if (LeftState != LeftLastState) 
     {
-      if (digitalRead(VR_RIGHT) != LeftState) 
+      if (digitalRead(VR_LEFT) != LeftState) 
       {
         if(Count >= 1)
         {

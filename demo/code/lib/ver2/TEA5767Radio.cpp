@@ -27,7 +27,7 @@ Simon Monk 2013
 #include "TEA5767N.h"
 #include "TEA5767Radio.h"
 
-float g_fre_arr[MAX_CHANNEL] = {89.0, 90.0, 91.0, 96.0, 96.5, 100.0, 101.0, 102.7, 104.0, 105.5};
+float g_fre_arr[MAX_CHANNEL] = {91.0, 94.0, 96.5, 97.0, 102.7, 105.5};
 TEA5767N radio = TEA5767N();
 
 void radio_set_freq(float freq)

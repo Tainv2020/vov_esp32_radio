@@ -12,7 +12,8 @@ typedef enum
   is_btn6,
   is_btn_next,
   is_btn_pre,
-  is_btn_mode
+  is_btn_mode,
+  is_btn_play_stop
 } gpio_btn;
 
 typedef enum
@@ -21,9 +22,11 @@ typedef enum
   using_max98357
 } gpio_module_mode;
 
+extern gpio_btn g_btn_state;
+
 void gpio_init_io(void);
 
-gpio_btn gpio_check_btn(void);
+void gpio_check_btn(void);
 
 void gpio_read_VR(int8_t *frequency);
 
